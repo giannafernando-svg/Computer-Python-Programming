@@ -1,0 +1,9 @@
+try:
+  Enter1 = float(input("Please give a number: "))
+  Enter2 = float(input("Please give another number: "))
+  average = Enter1/Enter2
+  print("The avereage is: ", average)
+  sum = Enter1 + Enter2
+  print("The sum is: ", sum)
+except ValueError:
+  print("Error: Input entered is not a number")
