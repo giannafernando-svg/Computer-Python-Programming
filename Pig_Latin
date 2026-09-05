@@ -1,0 +1,19 @@
+def Title(string):
+  Lower = string.lower()
+  Upper = str(string[0])
+  Upper_Letter = Upper.upper()
+  To_Title = Upper_Letter + Lower[1:]
+  return To_Title
+
+Enter = input("Please enter a word: ")
+Vowel = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
+if Enter[0] in Vowel:
+  Upper = Title(Enter)
+  New_Word = Upper + "way"
+  print(New_Word)
+else:
+  length = len(Enter)
+  First_Letter = Enter[0]
+  Whole_Word = Enter[1:] + First_Letter + "ay"
+  New_Word = Title(Whole_Word)
+  print(New_Word)
