@@ -1,0 +1,12 @@
+import random
+random_number = random.randint(1, 20)
+print("A random number has been picked.")
+while True:
+    try:
+       Guess = int(input("Guess the number: "))
+       if Guess == random_number:
+         print("You guessed right!")
+       else:
+         print("You guessed wrong!")
+    except ValueError:
+      print("Error: Input entered is not a number.")
