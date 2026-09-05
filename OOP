@@ -1,0 +1,46 @@
+class UAandP:
+  def __init__(self, name):
+    self.name = name
+  def welcome(self):
+    return f"Welcome to UA&P, {self.name}"
+
+class Dragon(UAandP):
+  def welcome(self):
+    return f"Welcome, {self.name}. You are a UA&P dragon."
+  def speak(self):
+    return f"{self.name} breathes fire"
+
+class Professor(UAandP):
+  def welcome(self):
+    return f"Welcome back, Professor {self.name}."
+
+class classmate(UAandP):
+  def welcome(self):
+    return f"You, {self.name}, are somehow both lazy, and studious."
+  def __init__(self):
+    self._courses =[]
+  def enroll(self, course):
+    self._courses.append(course)
+  def study(self):
+    for c in self._courses:
+      print(f"Studying for {c}.")
+    
+
+class BLDG(UAandP):
+  def welcome(self):
+    return f"Wow! It's cold here in the {self.name}."
+    
+class org(UAandP):
+  def welcome(self):
+    return f"Welcome to {self.name}."
+
+Karl = Dragon("Karl")
+print(Karl.welcome)
+print(Karl.speak)
+Geek = classmate()
+Geek.enroll("Computer Programming")
+Geek.study()
+
+guests = [Professor("Micheal"), classmate("Mika"), org("DSC"), BLDG("ACB")]
+for g in guests:
+  print(g.welcome)
